@@ -1,5 +1,7 @@
-import React from "react";
-import { Icon, Menu } from "antd";
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import { Icon, Menu } from 'antd';
 
 const NavigationBar = ({ handleMenuClick, currentMenu }) => (
   <Menu
@@ -23,5 +25,10 @@ const NavigationBar = ({ handleMenuClick, currentMenu }) => (
     </Menu.Item>
   </Menu>
 );
+
+NavigationBar.propTypes = {
+  handleMenuClick: PropTypes.func,
+  currentMenu: PropTypes.string,
+};
 
 export default NavigationBar;
